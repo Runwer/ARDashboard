@@ -24,7 +24,7 @@ def getReport(token, cID):
 
 token = getToken()['access_token']
 campaignList = getList(token)
-print(getReport(token, campaignList['data'][1]['id']))
+print(getReport(token, campaignList['data'][1]['id']['weekly']))
 
 
 
