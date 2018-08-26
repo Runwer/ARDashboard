@@ -20,11 +20,8 @@ def getReport(token, cID):
     baseurl = 'https://campaign-api.audiencereport.com/reports/'
     header = {'Authorization': 'Bearer '+token}
     par = {'id': cID}
-    return(requests.get(baseurl+cID, headers=header).text)
+    return(requests.get(baseurl+cID, headers=header).json())
 
-token = getToken()['access_token']
-campaignList = getList(token)
-print(getReport(token, campaignList['data'][1]['id']['weekly']))
 
 
 
